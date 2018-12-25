@@ -5,13 +5,16 @@ public class main {
             b.Add(40);//Node
             b.Add(50);//Right
             b.Add(30);//Left
-            b.Display();
+            System.out.println();
+           System.out.println();
             b.Find(10);//not in tree
             b.Find(50);
             b.delete(20);//not in tree
             b.delete(40);
             System.out.println();
-            b.Display();                   
+            b.Display();
+            b.Display();       
+            b.Display();       
         }
     }       
 }
@@ -62,13 +65,13 @@ class BinarySearchTree {
          root=deleteNodeUsingRecursive(root,value);
      }
      void preorder(Node n){
-           if( n == null ) { return;}
-                       System.out.print(n.getData()+" ");
+           if( n == null )  return;
+                       System.out.println(n.getData()+" ");
                       preorder(n.getLeft());
                       preorder(n.getRight());
         }
      void Inorder(Node n){
-           if( n == null ) {System.out.println(); return;}
+           if( n == null ) return;
                        Inorder(n.getLeft());
                        System.out.print(n.getData()+" ");
                        Inorder(n.getRight());  
